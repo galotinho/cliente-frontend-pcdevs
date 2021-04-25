@@ -1,0 +1,49 @@
+<div>
+    <input type="hidden" [(ngModel)]="cliente.id">
+    <div>
+        <label for="">Nome Completo</label>
+        <input type="text" [(ngModel)]="cliente.nomeCompleto">
+    </div>
+    <div>
+        <label for="">CPF</label>
+        <input type="text" [(ngModel)]="cliente.cpf">
+    </div>
+    <div>
+        <label for="">RG</label>
+        <input type="text" [(ngModel)]="cliente.rg">
+    </div>
+    <div>
+        <label for="">Telefone</label>
+        <input type="text" [(ngModel)]="cliente.telefone">
+    </div>
+    <div *ngIf=operacao>
+        <button type="submit" (click)=adicionar()>Adicionar</button> 
+    </div>  
+    <div *ngIf=!operacao>
+        <button type="submit" (click)=atualizar()>Atualizar</button> 
+    </div>
+     
+</div>  
+
+
+<table border="1">
+    <tr>
+        <th>ID</th>       
+        <th>Nome</th>
+        <th>Sobrenome</th>      
+        <th>Telefone</th>
+        <th>Data de Criação</th>
+        <th></th>        
+    </tr>
+    <tr *ngFor="let dado of clientes">
+        <td>{{dado.id}}</td>
+        <td>{{dado.nome}}</td>
+        <td>{{dado.sobrenome}}</td>         
+        <td>{{dado.telefone}}</td>  
+        <td>{{dado.dataCriacao}}</td>  
+        <td>
+            <button (click)=editar(dado)>Atualizar</button>
+            <button >Excluir</button>
+        </td>   
+    </tr>
+</table>

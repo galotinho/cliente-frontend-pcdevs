@@ -1,13 +1,35 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "9c0eb58e-89fe-4414-b6c6-5df9b90a5fba"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "cliente": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
+        "@schematics/angular:component": {
+          "spec": false,
+          "style": "css",
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "commonModule": true,
+          "routing": true,
+          "routingScope": "Child"
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
         }
       },
       "root": "",
