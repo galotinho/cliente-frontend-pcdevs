@@ -30,7 +30,8 @@
     <tr>
         <th>ID</th>       
         <th>Nome</th>
-        <th>Sobrenome</th>      
+        <th>Sobrenome</th> 
+        <th>RG</th>     
         <th>Telefone</th>
         <th>Data de Criação</th>
         <th></th>        
@@ -38,7 +39,8 @@
     <tr *ngFor="let dado of clientes">
         <td>{{dado.id}}</td>
         <td>{{dado.nome}}</td>
-        <td>{{dado.sobrenome}}</td>         
+        <td>{{dado.sobrenome}}</td> 
+        <td>{{dado.rg}}</td>        
         <td>{{dado.telefone}}</td>  
         <td>{{dado.dataCriacao}}</td>  
         <td>
